@@ -1,0 +1,11 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test (macos-latest, None) / Common_EmailMixin (macos-latest, None)"},
+          {context: "Validate (target: main) / Build and Test (ubuntu-latest, None) / Common_EmailMixin (ubuntu-latest, None)"},
+          {context: "Validate (target: main) / Build and Test (windows-latest, None) / Common_EmailMixin (windows-latest, None)"},
+          {context: "Validate Pull Request (target: main) / Common_EmailMixin (ubuntu-latest, None)"},
+          {context: "Analyze (python)"}
+        ]

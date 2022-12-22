@@ -1,0 +1,17 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          # TODO: {context: "Validate (target: main) / Build and Test: standard (macos-latest) / v4-DavidBrownell_TheLanguage (macos-latest, standard)"},
+          # TODO: {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / v4-DavidBrownell_TheLanguage (ubuntu-latest, standard)"},
+          # TODO: {context: "Validate (target: main) / Build and Test: standard (windows-latest) / v4-DavidBrownell_TheLanguage (windows-latest, standard)"},
+          # TODO: {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (macos-latest, dev)"},
+          # TODO: {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev)"},
+          # TODO: {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (windows-latest, dev)"},
+          # TODO: {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (macos-latest, dev binaries)"},
+          # TODO: {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev binaries)"},
+          # TODO: {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (windows-latest, dev binaries)"},
+          # TODO: {context: "Validate Pull Request (target: main) / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

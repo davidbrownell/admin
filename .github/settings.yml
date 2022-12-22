@@ -1,0 +1,66 @@
+repository:
+  # This is the settings that need to be applied to all repositories in the org
+  # See https://developer.github.com/v3/repos/#edit for all available settings for a repository
+
+  allow_auto_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: false
+  allow_squash_merge: false
+
+  # Keep this as true for most cases
+  # A lot of the policies below cannot be implemented on bare repos
+  # Pass true to create an initial commit with empty README.
+  auto_init: true
+
+  default_branch: main
+  delete_branch_on_merge: true
+
+  has_downloads: false
+  has_issues: true
+  has_projects: true
+  has_wiki: true
+
+  is_template: false
+
+  merge_commit_title: PR_TITLE
+  merge_commit_message: PR_BODY
+
+  security:
+    enableVulnerabilityAlerts: true
+
+  # TODO: These settings don't work as they require admin rights
+  # security_and_analysis:
+  #   advanced_security: true
+  #   secret_scanning: true
+  #   secret_scanning_push_protection: true
+
+  visibility: public
+
+  web_commit_signoff_required: true
+
+branches:
+  - name: main
+    protection:
+      allow_deletions: false
+      allow_force_pushes: false
+
+      enforce_admins: true
+      lock_branch: false
+
+      require_linear_history: false
+
+      required_conversation_resolution: true
+
+      required_pull_request_reviews:
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: false
+        require_last_push_approval: false
+        required_approving_review_count: 0
+
+      required_signatures: true
+
+      required_status_checks:
+        checks: []
+        strict: true  # Require branches to be up-to-date
+
+      restrictions: null

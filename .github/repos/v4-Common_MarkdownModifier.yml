@@ -1,0 +1,17 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / v4-Common_MarkdownModifier (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / v4-Common_MarkdownModifier (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / v4-Common_MarkdownModifier (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-Common_MarkdownModifier (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-Common_MarkdownModifier (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-Common_MarkdownModifier (windows-latest, dev)"},
+          {context: "Validate (target: main) / v4-Common_MarkdownModifier (macos-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-Common_MarkdownModifier (ubuntu-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-Common_MarkdownModifier (windows-latest, dev binaries)"},
+          {context: "Validate Pull Request (target: main) / v4-Common_MarkdownModifier (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

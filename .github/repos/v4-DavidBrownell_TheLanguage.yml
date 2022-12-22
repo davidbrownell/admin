@@ -1,0 +1,17 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / v4-DavidBrownell_TheLanguage (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / v4-DavidBrownell_TheLanguage (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / v4-DavidBrownell_TheLanguage (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_TheLanguage (windows-latest, dev)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (macos-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_TheLanguage (windows-latest, dev binaries)"},
+          {context: "Validate Pull Request (target: main) / v4-DavidBrownell_TheLanguage (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

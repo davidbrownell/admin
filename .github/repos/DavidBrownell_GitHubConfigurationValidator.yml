@@ -1,0 +1,18 @@
+branches:
+
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / DavidBrownell_GitHubConfigurationValidator (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / DavidBrownell_GitHubConfigurationValidator (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / DavidBrownell_GitHubConfigurationValidator (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_GitHubConfigurationValidator (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_GitHubConfigurationValidator (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_GitHubConfigurationValidator (windows-latest, dev)"},
+          {context: "Validate (target: main) / DavidBrownell_GitHubConfigurationValidator (macos-latest, dev binaries)"},
+          {context: "Validate (target: main) / DavidBrownell_GitHubConfigurationValidator (ubuntu-latest, dev binaries)"},
+          {context: "Validate (target: main) / DavidBrownell_GitHubConfigurationValidator (windows-latest, dev binaries)"},
+          {context: "Validate Pull Request (target: main) / DavidBrownell_GitHubConfigurationValidator (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

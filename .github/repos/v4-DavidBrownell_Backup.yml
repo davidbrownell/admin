@@ -1,0 +1,17 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / DavidBrownell_Backup (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / DavidBrownell_Backup (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / DavidBrownell_Backup (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_Backup (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_Backup (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / DavidBrownell_Backup (windows-latest, dev)"},
+          {context: "Validate (target: main) / DavidBrownell_Backup (macos-latest, dev binaries)"},
+          {context: "Validate (target: main) / DavidBrownell_Backup (ubuntu-latest, dev binaries)"},
+          {context: "Validate (target: main) / DavidBrownell_Backup (windows-latest, dev binaries)"},
+          {context: "Validate Pull Request (target: main) / DavidBrownell_Backup (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

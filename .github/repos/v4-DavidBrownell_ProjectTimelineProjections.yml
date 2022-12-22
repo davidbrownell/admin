@@ -1,0 +1,18 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / v4-DavidBrownell_ProjectTimelineProjections (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / v4-DavidBrownell_ProjectTimelineProjections (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / v4-DavidBrownell_ProjectTimelineProjections (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_ProjectTimelineProjections (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_ProjectTimelineProjections (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev / v4-DavidBrownell_ProjectTimelineProjections (windows-latest, dev)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_ProjectTimelineProjections (macos-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_ProjectTimelineProjections (ubuntu-latest, dev binaries)"},
+          {context: "Validate (target: main) / v4-DavidBrownell_ProjectTimelineProjections (windows-latest, dev binaries)"},
+          {context: "Validate Pull Request (target: main) / v4-DavidBrownell_ProjectTimelineProjections (ubuntu-latest, dev)"},
+          {context: "Analyze (python)"},
+          {context: "Analyze (javascript)"}
+        ]

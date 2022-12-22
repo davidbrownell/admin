@@ -1,0 +1,11 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test (macos-latest, python310) / Common_Foundation (macos-latest, python310)"},
+          {context: "Validate (target: main) / Build and Test (ubuntu-latest, python310) / Common_Foundation (ubuntu-latest, python310)"},
+          {context: "Validate (target: main) / Build and Test (windows-latest, python310) / Common_Foundation (windows-latest, python310)"},
+          {context: "Validate Pull Request (target: main) / Common_Foundation (ubuntu-latest, python310)"},
+          {context: "Analyze (python)"}
+        ]

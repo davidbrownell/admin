@@ -1,0 +1,11 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test (macos-latest, None) / v4-DavidBrownell_MiscScriptsMixin (macos-latest, None)"},
+          {context: "Validate (target: main) / Build and Test (ubuntu-latest, None) / v4-DavidBrownell_MiscScriptsMixin (ubuntu-latest, None)"},
+          {context: "Validate (target: main) / Build and Test (windows-latest, None) / v4-DavidBrownell_MiscScriptsMixin (windows-latest, None)"},
+          {context: "Validate Pull Request (target: main) / v4-DavidBrownell_MiscScriptsMixin (ubuntu-latest, None)"},
+          {context: "Analyze (python)"}
+        ]
