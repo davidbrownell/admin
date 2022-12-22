@@ -1,0 +1,13 @@
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks: [
+          {context: "Validate (target: main) / Build and Test: standard (macos-latest) / Common_SimpleSchema (macos-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (ubuntu-latest) / Common_SimpleSchema (ubuntu-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: standard (windows-latest) / Common_SimpleSchema (windows-latest, standard)"},
+          {context: "Validate (target: main) / Build and Test: dev (macos-latest) / Common_SimpleSchema (macos-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev (ubuntu-latest) / Common_SimpleSchema (ubuntu-latest, dev)"},
+          {context: "Validate (target: main) / Build and Test: dev (windows-latest) / Common_SimpleSchema (windows-latest, dev)"},
+          {context: "Analyze (python)"}
+        ]

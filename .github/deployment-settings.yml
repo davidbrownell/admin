@@ -1,0 +1,4 @@
+restrictedRepos:
+  include: [
+    'test_safe-settings'
+  ]
